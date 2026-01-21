@@ -388,19 +388,150 @@
             </div>
         </section>
 
-        <!-- Tech Stack (Simplified) -->
-        <section id="skills" class="py-12 bg-slate-50 dark:bg-slate-900">
-             <div class="container mx-auto px-6 text-center">
-                <p class="text-slate-500 mb-6 uppercase tracking-widest text-sm font-semibold">Tech Stack</p>
-                <div class="flex flex-wrap justify-center gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-                    <i class="fab fa-java text-4xl hover:text-orange-600 hover:scale-110 transition-transform"></i>
-                    <i class="fab fa-react text-4xl hover:text-cyan-400 hover:scale-110 transition-transform"></i>
-                    <i class="fab fa-node text-4xl hover:text-green-500 hover:scale-110 transition-transform"></i>
-                    <i class="fab fa-aws text-4xl hover:text-orange-400 hover:scale-110 transition-transform"></i>
-                    <i class="fab fa-docker text-4xl hover:text-blue-500 hover:scale-110 transition-transform"></i>
-                    <i class="fas fa-database text-4xl hover:text-yellow-500 hover:scale-110 transition-transform"></i>
+        <!-- Tech Stack / Skills Section (Partitioned) -->
+        <section id="skills" class="py-20 bg-slate-50 dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-16" data-aos="fade-up">Technical Proficiency</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+                    
+                    <!-- Frontend Column -->
+                    <div class="group p-8 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="0">
+                        <h3 class="text-lg font-bold text-slate-700 dark:text-slate-200 mb-8 flex items-center justify-center gap-2">
+                            <i class="fas fa-code text-blue-500"></i> Frontend
+                        </h3>
+                        <div class="flex flex-wrap justify-center gap-6">
+                            <!-- React -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fab fa-react text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-cyan-400 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">React</span>
+                            </div>
+                            <!-- HTML5 -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fab fa-html5 text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-orange-500 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">HTML5</span>
+                            </div>
+                            <!-- CSS3 -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fab fa-css3-alt text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-blue-500 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">CSS3</span>
+                            </div>
+                            <!-- JS -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fab fa-js text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-yellow-400 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">JS</span>
+                            </div>
+                        
+                            <!-- Bootstrap -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fab fa-bootstrap text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-purple-600 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">Bootstrap</span>
+                            </div>
+                            <!-- Tailwind -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fas fa-wind text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-teal-400 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">Tailwind</span>
+                                </div>
+                            </div>
+                    </div>
+
+                    <!-- Backend Column -->
+                    <div class="group p-8 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-lg font-bold text-slate-700 dark:text-slate-200 mb-8 flex items-center justify-center gap-2">
+                            <i class="fas fa-server text-green-500"></i> Backend
+                        </h3>
+                        <div class="flex flex-wrap justify-center gap-6">
+                            <!-- Java -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fab fa-java text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-red-500 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">Java</span>
+                            </div>
+                             <!-- Spring (Leaf) -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fas fa-leaf text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-green-600 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">Spring</span>
+                            </div>
+                            <!-- Node -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fab fa-node text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-green-500 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">Node</span>
+                            </div>
+                            <!-- Express (E) -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fas fa-e text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-gray-700 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">Express</span>
+                            </div>
+                            <!-- Python -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fab fa-python text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-blue-500 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">Python</span>
+                            </div>
+                            <!-- PHP -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fab fa-php text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-indigo-500 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">PHP</span>
+                            </div>
+                           
+                       
+                    </div>
                 </div>
-             </div>
+
+                    <!-- Tools & DB Column -->
+                    <div class="group p-8 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-lg font-bold text-slate-700 dark:text-slate-200 mb-8 flex items-center justify-center gap-2">
+                            <i class="fas fa-tools text-orange-500"></i> Tools & DB
+                        </h3>
+                        <div class="flex flex-wrap justify-center gap-6">
+                            <!-- Docker -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fab fa-docker text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-blue-500 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">Docker</span>
+                            </div>
+                            <!-- AWS -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fab fa-aws text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-orange-400 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">AWS</span>
+                            </div>
+                            <!-- Database -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fas fa-database text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-yellow-500 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">SQL</span>
+                            </div>
+                             <!-- MongoDB -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fas fa-leaf text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-green-400 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">MongoDB</span>
+                            </div>
+                            <!-- Git -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fab fa-git-alt text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-orange-600 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">Git</span>
+                            </div>
+                            <!-- GitHub -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fab fa-github text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-slate-900 dark:group-hover/icon:text-white group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">GitHub</span>
+                            </div>
+                           <!-- VS Code -->
+                           <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fas fa-code text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-blue-500 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">VS Code</span>
+                            </div>
+                            <!-- IntelliJ IDEA -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fas fa-lightbulb text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-purple-600 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">IntelliJ IDEA</span>
+                            </div>
+                            <!-- Eclipse -->
+                            <div class="flex flex-col items-center gap-2 group/icon">
+                                <i class="fas fa-rocket text-4xl text-slate-400 dark:text-slate-500 group-hover/icon:text-indigo-600 group-hover/icon:scale-110 transition-all duration-300"></i>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 opacity-0 group-hover/icon:opacity-100 transition-opacity">Eclipse</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
 
         <!-- Projects Section (With Modals) -->

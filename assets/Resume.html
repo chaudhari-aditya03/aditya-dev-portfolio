@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Aditya Bapusaheb Chaudhari</title>
+    <meta name="description" content="Resume of Aditya Bapusaheb Chaudhari - Full Stack Developer">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* ATS Friendly Colors: High Contrast */
+            --primary-color: #0f172a; /* Slate 900 */
+            --secondary-color: #334155; /* Slate 700 */
+            --accent-color: #2563eb; /* Blue 600 */
+            --text-color: #1e293b;
+            --light-text: #64748b;
+            --border-color: #cbd5e1;
+            --bg-color: #f8fafc;
+            --paper-color: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 30px;
+        }
+
+        .resume-container {
+            max-width: 21cm; /* Standard A4 Width */
+            margin: 0 auto;
+            background-color: var(--paper-color);
+            padding: 40px 50px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            border-radius: 2px;
+        }
+
+        /* --- Header Section --- */
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 28px;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            color: var(--secondary-color);
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+        }
+
+        .links {
+            font-size: 14px;
+        }
+
+        .links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0 8px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Section Styling --- */
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 18px;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- Summary Section (New for ATS) --- */
+        .summary {
+            font-size: 14px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* --- Content Layout --- */
+        .entry {
+            margin-bottom: 18px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .entry-title {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--text-color);
+        }
+
+        .entry-subtitle {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--secondary-color);
+            font-style: italic;
+        }
+
+        .entry-meta {
+            font-size: 13px;
+            color: var(--light-text);
+            font-weight: 500;
+            text-align: right;
+        }
+
+        .entry-content {
+            font-size: 14px;
+            margin-top: 6px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 18px;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 3px;
+            padding-left: 5px;
+        }
+
+        /* --- Skills Section --- */
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .skills-table tr {
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .skills-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .skills-label {
+            font-weight: 700;
+            color: var(--primary-color);
+            width: 140px;
+            padding: 8px 0;
+            vertical-align: top;
+        }
+
+        .skills-data {
+            color: var(--text-color);
+            padding: 8px 0;
+        }
+
+        /* --- Responsive & Print --- */
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .resume-container { 
+                padding: 20px; 
+                width: 100%;
+            }
+            .entry-header { flex-direction: column; }
+            .entry-meta { text-align: left; margin-top: 2px; }
+            .skills-label { display: block; width: 100%; padding-bottom: 2px; }
+            .skills-data { display: block; padding-top: 0; padding-bottom: 12px; }
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .resume-container { 
+                box-shadow: none; 
+                padding: 0; 
+                max-width: 100%; 
+                margin: 0;
+            }
+            a { text-decoration: none; color: black; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        
+        <!-- Header -->
+        <header>
+            <h1>Aditya Bapusaheb Chaudhari</h1>
+            <div class="contact-info">
+                <span>Pune, Maharashtra</span> |
+                <span>+91 709648063</span> |
+                <span>adityachaudhari312005@gmail.com</span>
+            </div>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/aditya-chaudhari-b9767a36a/">LinkedIn</a> |
+                <a href="https://github.com/chaudhari-aditya03">GitHub</a> |
+                <a href="https://aditya-dev-portfolio-peach.vercel.app/">Portfolio</a>
+            </div>
+        </header>
+
+        <!-- Professional Summary (Added for ATS Keywords) -->
+        <section>
+            <h2>Professional Summary</h2>
+            <div class="summary">
+                High-achieving <strong>Full Stack Developer</strong> and Computer Science graduate (Department Rank 1st, CGPA 9.48) with robust expertise in <strong>Java, Spring Boot, React.js</strong>, and Database Management. Proven track record of building scalable web applications like NEXUSA and Smart Gram. Skilled in optimizing SQL queries by 35% and solving complex DSA problems. Passionate about developing efficient, secure, and user-centric software solutions.
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section>
+            <h2>Technical Skills</h2>
+            <table class="skills-table">
+                <tr>
+                    <td class="skills-label">Languages</td>
+                    <td class="skills-data">Java, JavaScript, C, C++, PHP, SQL, C.Net, Python</td>
+                </tr>
+                <tr>
+                    <td class="skills-label">Backend</td>
+                    <td class="skills-data">Spring Boot, Hibernate, JDBC, JSP, Servlets, REST APIs, JWT, MVC</td>
+                </tr>
+                <tr>
+                    <td class="skills-label">Frontend</td>
+                    <td class="skills-data">React.js, Redux Toolkit, Tailwind CSS, Bootstrap, HTML5, CSS3</td>
+                </tr>
+                <tr>
+                    <td class="skills-label">Databases</td>
+                    <td class="skills-data">MySQL, MongoDB, PostgreSQL</td>
+                </tr>
+                <tr>
+                    <td class="skills-label">Tools & Cloud</td>
+                    <td class="skills-data">Git, GitHub, Docker, Postman, Maven, VS Code, Vercel, Netlify</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2>Education</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">B.Sc. in Computer Science</span>
+                    <span class="entry-meta">2022 – 2025</span>
+                </div>
+                <div class="entry-subtitle">SBVP Samaj's Thorat College, Sangamner</div>
+                <div class="entry-content">
+                    <ul>
+                        <li><strong>Ranked 1st</strong> among 120+ students in the department.</li>
+                        <li><strong>CGPA:</strong> 9.48 / 10.0</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section>
+            <h2>Key Projects</h2>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">NEXUSA - Crime Data & Analytics Hub</span>
+                    <span class="entry-meta">Java Full Stack</span>
+                </div>
+                <div class="entry-content">
+                    <ul>
+                        <li>Developed a secure crime management platform using <strong>JSP, Servlets, and MySQL</strong>, implementing role-based access control (RBAC) for Police and Admins.</li>
+                        <li>Engineered 12+ functional modules including FIR tracking and evidence logging.</li>
+                        <li><strong>Optimized SQL queries</strong> to reduce report generation time by <strong>35%</strong>.</li>
+                        <li>Designed analytical dashboards to visualize crime trends and resolution metrics.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Smart Gram - Digital Governance Platform</span>
+                    <span class="entry-meta">React & Spring Boot</span>
+                </div>
+                <div class="entry-content">
+                    <ul>
+                        <li>Built a scalable rural governance app using <strong>React.js</strong> (Frontend) and <strong>Spring Boot</strong> (Backend).</li>
+                        <li>Developed and deployed <strong>12+ REST APIs</strong> for citizen services, grievance tracking, and document requests.</li>
+                        <li>Implemented secure <strong>JWT authentication</strong> and a normalized MySQL database schema.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Frontend UI Portfolio & Clones</span>
+                    <span class="entry-meta">HTML/CSS/JS</span>
+                </div>
+                <div class="entry-content">
+                    <ul>
+                        <li>Created 10+ responsive interfaces including Amazon/Netflix clones and Admin Dashboards.</li>
+                        <li>Achieved <strong>95+ Lighthouse Performance</strong> scores via optimized asset loading and semantic HTML.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses & Certifications -->
+        <section>
+            <h2>Certifications</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Full Stack Java Development</span>
+                    <span class="entry-meta">The Kiran Academy</span>
+                </div>
+                <div class="entry-content">
+                    Comprehensive training in Core Java, Advanced Java, Spring Boot, Hibernate, Microservices, and Maven.
+                </div>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Full Stack Development (MERN)</span>
+                    <span class="entry-meta">UpGrad (Ongoing)</span>
+                </div>
+                <div class="entry-content">
+                    Specializing in React, Node.js, Express, MongoDB, and System Design.
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section>
+            <h2>Achievements</h2>
+            <div class="entry-content">
+                <ul>
+                    <li><strong>University Rank Holder:</strong> Secured 1st Rank in B.Sc. CS (CGPA 9.48).</li>
+                    <li><strong>Research Excellence:</strong> Selected for the University-Level <strong>AVISHKAR Research Competition</strong>.</li>
+                    <li><strong>Problem Solving:</strong> Solved <strong>150+ DSA problems</strong> on LeetCode demonstrating strong logic building.</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

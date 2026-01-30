@@ -1,4 +1,4 @@
-# 🌐 Aadu.dev — Developer Portfolio
+# 🌐 Aditya | Developer— Developer Portfolio
 
 Welcome to my personal portfolio website repository.
 

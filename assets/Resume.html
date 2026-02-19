@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Aditya Bapusaheb Chaudhari</title>
     <meta name="description" content="Resume of Aditya Bapusaheb Chaudhari - Full Stack Developer">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         :root {
-            /* ATS Friendly Colors: High Contrast */
-            --primary-color: #0f172a; /* Slate 900 */
-            --secondary-color: #334155; /* Slate 700 */
-            --accent-color: #2563eb; /* Blue 600 */
-            --text-color: #1e293b;
-            --light-text: #64748b;
-            --border-color: #cbd5e1;
-            --bg-color: #f8fafc;
-            --paper-color: #ffffff;
+            /* ATS Friendly Palette - High Contrast */
+            --primary-slate: #0f172a;
+            /* Headings */
+            --accent-blue: #2563eb;
+            /* Links & Highlights */
+            --text-main: #334155;
+            /* Body text */
+            --text-light: #64748b;
+            /* Metadata (dates/locations) */
+            --bg-paper: #ffffff;
+            --border-light: #e2e8f0;
+            --section-gap: 24px;
         }
 
         * {
@@ -28,93 +33,122 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            padding: 30px;
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            line-height: 1.5;
+            padding: 40px 0;
+            font-size: 10.5pt;
+            /* Optimal print size */
         }
 
-        .resume-container {
-            max-width: 21cm; /* Standard A4 Width */
+        /* --- Page Layout (Single Column) --- */
+        .page {
+            max-width: 21cm;
+            min-height: 29.7cm;
+            /* A4 Height */
             margin: 0 auto;
-            background-color: var(--paper-color);
-            padding: 40px 50px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-            border-radius: 2px;
+            background-color: var(--bg-paper);
+            padding: 50px 60px;
+            /* Standard Margins */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
-        /* --- Header Section --- */
+        /* --- Header --- */
         header {
             text-align: center;
-            margin-bottom: 25px;
-            border-bottom: 3px solid var(--primary-color);
+            border-bottom: 2px solid var(--primary-slate);
             padding-bottom: 20px;
+            margin-bottom: var(--section-gap);
         }
 
         h1 {
-            font-family: 'Merriweather', serif;
             font-size: 28px;
-            color: var(--primary-color);
+            font-weight: 800;
+            color: var(--primary-slate);
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
+        }
+
+        .role-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin-bottom: 12px;
+            display: block;
         }
 
         .contact-info {
-            font-size: 14px;
-            color: var(--secondary-color);
-            margin-bottom: 12px;
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
+            justify-content: center;
+            gap: 12px;
+            font-size: 13px;
+            color: var(--text-main);
         }
 
-        .contact-info span {
+        .contact-info span,
+        .contact-info a {
             display: flex;
             align-items: center;
+            gap: 5px;
         }
 
-        .links {
-            font-size: 14px;
-        }
-
-        .links a {
-            color: var(--accent-color);
+        .contact-info a {
+            color: var(--text-main);
             text-decoration: none;
             font-weight: 500;
-            margin: 0 8px;
         }
 
-        .links a:hover {
+        .contact-info a:hover {
+            color: var(--accent-blue);
             text-decoration: underline;
         }
 
-        /* --- Section Styling --- */
+        /* Separator for contact info */
+        .contact-separator {
+            color: var(--border-light);
+        }
+
+        /* --- Sections --- */
         section {
-            margin-bottom: 25px;
+            margin-bottom: var(--section-gap);
         }
 
         h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 18px;
-            color: var(--primary-color);
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary-slate);
             text-transform: uppercase;
-            border-bottom: 1px solid var(--border-color);
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border-light);
             padding-bottom: 6px;
             margin-bottom: 15px;
-            letter-spacing: 0.5px;
         }
 
-        /* --- Summary Section (New for ATS) --- */
-        .summary {
-            font-size: 14px;
-            color: var(--secondary-color);
-            margin-bottom: 20px;
+        /* --- Professional Summary --- */
+        .summary-text {
             text-align: justify;
         }
 
-        /* --- Content Layout --- */
+        /* --- Skills (Grid Layout for Single Column) --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 10px 20px;
+        }
+
+        .skill-category {
+            font-weight: 700;
+            color: var(--primary-slate);
+            font-size: 14px;
+        }
+
+        .skill-list {
+            font-size: 14px;
+        }
+
+        /* --- Experience / Projects --- */
         .entry {
             margin-bottom: 18px;
         }
@@ -127,181 +161,195 @@
         }
 
         .entry-title {
-            font-weight: 700;
             font-size: 16px;
-            color: var(--text-color);
+            font-weight: 700;
+            color: var(--primary-slate);
         }
 
         .entry-subtitle {
-            font-weight: 600;
             font-size: 14px;
-            color: var(--secondary-color);
-            font-style: italic;
+            font-weight: 600;
+            color: var(--accent-blue);
+            font-style: normal;
         }
 
         .entry-meta {
             font-size: 13px;
-            color: var(--light-text);
+            color: var(--text-light);
             font-weight: 500;
-            text-align: right;
         }
 
-        .entry-content {
-            font-size: 14px;
+        /* Lists */
+        ul {
+            list-style-type: none;
+            /* Removed default bullets for custom styling */
             margin-top: 6px;
         }
 
-        ul {
-            list-style-type: disc;
-            margin-left: 18px;
-            padding-left: 0;
-        }
-
         li {
-            margin-bottom: 3px;
-            padding-left: 5px;
-        }
-
-        /* --- Skills Section --- */
-        .skills-table {
-            width: 100%;
-            border-collapse: collapse;
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 4px;
             font-size: 14px;
         }
 
-        .skills-table tr {
-            border-bottom: 1px solid #f1f5f9;
+        li::before {
+            content: "•";
+            /* Bullet */
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
         }
 
-        .skills-table tr:last-child {
-            border-bottom: none;
+        /* Education */
+        .education-entry {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
         }
 
-        .skills-label {
+        .edu-left {
             font-weight: 700;
-            color: var(--primary-color);
-            width: 140px;
-            padding: 8px 0;
-            vertical-align: top;
+            color: var(--primary-slate);
         }
 
-        .skills-data {
-            color: var(--text-color);
-            padding: 8px 0;
+        .edu-right {
+            color: var(--text-light);
+            font-size: 13px;
+        }
+
+        .edu-details {
+            margin-top: 2px;
+            font-style: italic;
+            color: var(--text-main);
         }
 
         /* --- Responsive & Print --- */
-        @media (max-width: 768px) {
-            body { padding: 10px; }
-            .resume-container { 
-                padding: 20px; 
+        @media screen and (max-width: 768px) {
+            .page {
+                padding: 20px;
                 width: 100%;
             }
-            .entry-header { flex-direction: column; }
-            .entry-meta { text-align: left; margin-top: 2px; }
-            .skills-label { display: block; width: 100%; padding-bottom: 2px; }
-            .skills-data { display: block; padding-top: 0; padding-bottom: 12px; }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 5px;
+                margin-bottom: 10px;
+            }
+
+            .skill-category {
+                text-decoration: underline;
+                margin-top: 8px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-separator {
+                display: none;
+            }
         }
 
         @media print {
-            body { background: white; padding: 0; }
-            .resume-container { 
-                box-shadow: none; 
-                padding: 0; 
-                max-width: 100%; 
-                margin: 0;
+            body {
+                background: none;
+                padding: 0;
             }
-            a { text-decoration: none; color: black; }
+
+            .page {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                padding: 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <div class="resume-container">
-        
+    <div class="page">
+
         <!-- Header -->
         <header>
             <h1>Aditya Bapusaheb Chaudhari</h1>
+            <span class="role-title">Full Stack Developer</span>
+
             <div class="contact-info">
-                <span>Pune, Maharashtra</span> |
-                <span>+91 709648063</span> |
-                <span>adityachaudhari312005@gmail.com</span>
+                <span>Pune, Maharashtra</span>
+                <span class="contact-separator">|</span>
+                <span>+91 709648063</span>
+                <span class="contact-separator">|</span>
+                <a href="mailto:adityachaudhari312005@gmail.com">adityachaudhari312005@gmail.com</a>
             </div>
-            <div class="links">
-                <a href="https://www.linkedin.com/in/aditya-chaudhari-b9767a36a/">LinkedIn</a> |
-                <a href="https://github.com/chaudhari-aditya03">GitHub</a> |
-                <a href="https://aditya-dev-portfolio-peach.vercel.app/">Portfolio</a>
+            <div class="contact-info" style="margin-top: 6px;">
+                <a href="https://www.linkedin.com/in/aditya-chaudhari-b9767a36a/">LinkedIn</a>
+                <span class="contact-separator">|</span>
+                <a href="https://github.com/chaudhari-aditya03">GitHub</a>
+                <span class="contact-separator">|</span>
+                <a href="https://aditya-chaudhari-sde-portfolio.vercel.app/">Portfolio</a>
             </div>
         </header>
 
-        <!-- Professional Summary (Added for ATS Keywords) -->
+        <!-- Summary -->
         <section>
             <h2>Professional Summary</h2>
-            <div class="summary">
-                High-achieving <strong>Full Stack Developer</strong> and Computer Science graduate (Department Rank 1st, CGPA 9.48) with robust expertise in <strong>Java, Spring Boot, React.js</strong>, and Database Management. Proven track record of building scalable web applications like NEXUSA and Smart Gram. Skilled in optimizing SQL queries by 35% and solving complex DSA problems. Passionate about developing efficient, secure, and user-centric software solutions.
+            <div class="summary-text">
+                High-achieving <strong>Full Stack Developer</strong> and Computer Science graduate (Department Rank 1st,
+                CGPA 9.48) with robust expertise in <strong>Java, Spring Boot, React.js</strong>, and Database
+                Management. Proven track record of building scalable web applications like NEXUSA and Smart Gram.
+                Skilled in optimizing SQL queries by 35% and solving complex DSA problems. Passionate about developing
+                efficient, secure, and user-centric software solutions.
             </div>
         </section>
 
         <!-- Technical Skills -->
         <section>
             <h2>Technical Skills</h2>
-            <table class="skills-table">
-                <tr>
-                    <td class="skills-label">Languages</td>
-                    <td class="skills-data">Java, JavaScript, C, C++, PHP, SQL, C.Net, Python</td>
-                </tr>
-                <tr>
-                    <td class="skills-label">Backend</td>
-                    <td class="skills-data">Spring Boot, Hibernate, JDBC, JSP, Servlets, REST APIs, JWT, MVC</td>
-                </tr>
-                <tr>
-                    <td class="skills-label">Frontend</td>
-                    <td class="skills-data">React.js, Redux Toolkit, Tailwind CSS, Bootstrap, HTML5, CSS3</td>
-                </tr>
-                <tr>
-                    <td class="skills-label">Databases</td>
-                    <td class="skills-data">MySQL, MongoDB, PostgreSQL</td>
-                </tr>
-                <tr>
-                    <td class="skills-label">Tools & Cloud</td>
-                    <td class="skills-data">Git, GitHub, Docker, Postman, Maven, VS Code, Vercel, Netlify</td>
-                </tr>
-            </table>
-        </section>
+            <div class="skills-grid">
+                <div class="skill-category">Languages</div>
+                <div class="skill-list">Java, JavaScript (ES6+), C, C++, PHP, SQL, Python</div>
 
-        <!-- Education -->
-        <section>
-            <h2>Education</h2>
-            <div class="entry">
-                <div class="entry-header">
-                    <span class="entry-title">B.Sc. in Computer Science</span>
-                    <span class="entry-meta">2022 – 2025</span>
+                <div class="skill-category">Backend</div>
+                <div class="skill-list">Spring Boot, Hibernate, JDBC, Servlets, RESTful APIs, JWT Auth, Microservices
                 </div>
-                <div class="entry-subtitle">SBVP Samaj's Thorat College, Sangamner</div>
-                <div class="entry-content">
-                    <ul>
-                        <li><strong>Ranked 1st</strong> among 120+ students in the department.</li>
-                        <li><strong>CGPA:</strong> 9.48 / 10.0</li>
-                    </ul>
+
+                <div class="skill-category">Frontend</div>
+                <div class="skill-list">React.js, Redux Toolkit, Tailwind CSS, Bootstrap, HTML5, CSS3, DOM Manipulation
                 </div>
+
+                <div class="skill-category">Database & Tools</div>
+                <div class="skill-list">MySQL, PostgreSQL, MongoDB, Git, GitHub, Docker, Postman, VS Code, Maven</div>
             </div>
         </section>
 
         <!-- Projects -->
         <section>
             <h2>Key Projects</h2>
-            
+
             <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">NEXUSA - Crime Data & Analytics Hub</span>
-                    <span class="entry-meta">Java Full Stack</span>
                 </div>
+                <div class="entry-subtitle">Java Full Stack | JSP, Servlets, MySQL</div>
                 <div class="entry-content">
                     <ul>
-                        <li>Developed a secure crime management platform using <strong>JSP, Servlets, and MySQL</strong>, implementing role-based access control (RBAC) for Police and Admins.</li>
-                        <li>Engineered 12+ functional modules including FIR tracking and evidence logging.</li>
-                        <li><strong>Optimized SQL queries</strong> to reduce report generation time by <strong>35%</strong>.</li>
-                        <li>Designed analytical dashboards to visualize crime trends and resolution metrics.</li>
+                        <li>Developed a secure crime management platform implementing Role-Based Access Control (RBAC)
+                            for Police and Admins, enhancing data security.</li>
+                        <li>Engineered 12+ functional modules including FIR tracking, evidence logging, and officer
+                            management.</li>
+                        <li><strong>Optimized SQL queries</strong> via indexing and normalization, reducing report
+                            generation time by <strong>35%</strong>.</li>
+                        <li>Designed analytical dashboards to visualize crime trends and resolution metrics for senior
+                            officials.</li>
                     </ul>
                 </div>
             </div>
@@ -309,13 +357,16 @@
             <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">Smart Gram - Digital Governance Platform</span>
-                    <span class="entry-meta">React & Spring Boot</span>
                 </div>
+                <div class="entry-subtitle">React.js & Spring Boot</div>
                 <div class="entry-content">
                     <ul>
-                        <li>Built a scalable rural governance app using <strong>React.js</strong> (Frontend) and <strong>Spring Boot</strong> (Backend).</li>
-                        <li>Developed and deployed <strong>12+ REST APIs</strong> for citizen services, grievance tracking, and document requests.</li>
-                        <li>Implemented secure <strong>JWT authentication</strong> and a normalized MySQL database schema.</li>
+                        <li>Built a scalable rural governance web application to digitize citizen services, grievance
+                            tracking, and document requests.</li>
+                        <li>Developed and deployed <strong>12+ REST APIs</strong> using Spring Boot, ensuring seamless
+                            data flow between frontend and backend.</li>
+                        <li>Implemented secure <strong>JWT authentication</strong> and a normalized MySQL database
+                            schema to ensure data integrity and user privacy.</li>
                     </ul>
                 </div>
             </div>
@@ -323,53 +374,60 @@
             <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">Frontend UI Portfolio & Clones</span>
-                    <span class="entry-meta">HTML/CSS/JS</span>
                 </div>
+                <div class="entry-subtitle">HTML5, CSS3, JavaScript</div>
                 <div class="entry-content">
                     <ul>
-                        <li>Created 10+ responsive interfaces including Amazon/Netflix clones and Admin Dashboards.</li>
-                        <li>Achieved <strong>95+ Lighthouse Performance</strong> scores via optimized asset loading and semantic HTML.</li>
+                        <li>Created 10+ responsive interfaces including pixel-perfect clones of Amazon and Netflix, and
+                            dynamic Admin Dashboards.</li>
+                        <li>Achieved <strong>95+ Google Lighthouse Performance</strong> scores by implementing lazy
+                            loading, optimized assets, and semantic HTML.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Courses & Certifications -->
+        <!-- Education -->
         <section>
-            <h2>Certifications</h2>
+            <h2>Education</h2>
             <div class="entry">
-                <div class="entry-header">
-                    <span class="entry-title">Full Stack Java Development</span>
-                    <span class="entry-meta">The Kiran Academy</span>
+                <div class="education-entry">
+                    <span class="edu-left">B.Sc. in Computer Science</span>
+                    <span class="edu-right">2022 – 2025</span>
                 </div>
-                <div class="entry-content">
-                    Comprehensive training in Core Java, Advanced Java, Spring Boot, Hibernate, Microservices, and Maven.
+                <div class="edu-details">
+                    SBVP Samaj's Thorat College, Sangamner | <strong>Rank 1st</strong> (CGPA: 9.48 / 10.0)
                 </div>
             </div>
-            <div class="entry">
-                <div class="entry-header">
-                    <span class="entry-title">Full Stack Development (MERN)</span>
-                    <span class="entry-meta">UpGrad (Ongoing)</span>
-                </div>
-                <div class="entry-content">
-                    Specializing in React, Node.js, Express, MongoDB, and System Design.
-                </div>
-            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section>
+            <h2>Certifications & Training</h2>
+            <ul>
+                <li><strong>Full Stack Java Development</strong> – The Kiran Academy (Comprehensive training in Core
+                    Java, Advanced Java, Spring Boot, Hibernate)</li>
+                <li><strong>Full Stack Development (MERN)</strong> – UpGrad (Ongoing specialization in React, Node.js,
+                    Express, MongoDB)</li>
+            </ul>
         </section>
 
         <!-- Achievements -->
         <section>
             <h2>Achievements</h2>
-            <div class="entry-content">
-                <ul>
-                    <li><strong>University Rank Holder:</strong> Secured 1st Rank in B.Sc. CS (CGPA 9.48).</li>
-                    <li><strong>Research Excellence:</strong> Selected for the University-Level <strong>AVISHKAR Research Competition</strong>.</li>
-                    <li><strong>Problem Solving:</strong> Solved <strong>150+ DSA problems</strong> on LeetCode demonstrating strong logic building.</li>
-                </ul>
-            </div>
+            <ul>
+                <li><strong>University Rank Holder:</strong> Secured 1st Rank in B.Sc. CS Department among 120+ students
+                    (CGPA 9.48).</li>
+                <li><strong>Research Excellence:</strong> Project selected for the prestigious University-Level
+                    <strong>AVISHKAR Research Competition</strong>.
+                </li>
+                <li><strong>Problem Solving:</strong> Solved <strong>150+ DSA problems</strong> on LeetCode/Hackerrank,
+                    demonstrating strong algorithmic thinking.</li>
+            </ul>
         </section>
 
     </div>
 
 </body>
+
 </html>
